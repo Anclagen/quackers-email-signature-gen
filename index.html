@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quackers Email Signature Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <h1>Email Signature Generator</h1>
+
+    <form id="signatureForm">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" oninput="updateSignature()" /><br /><br />
+
+      <label for="affiliate">Affiliate:</label><br />
+      <input type="text" id="affiliate" name="affiliate" oninput="updateSignature()" /><br /><br />
+
+      <label for="jobTitle">Job Title:</label><br />
+      <input type="text" id="jobTitle" name="jobTitle" oninput="updateSignature()" /><br /><br />
+
+      <label for="phone1">Phone 1:</label><br />
+      <input type="text" id="phone1" name="phone1" oninput="updateSignature()" /><br /><br />
+
+      <label for="phone2">Phone 2:</label><br />
+      <input type="text" id="phone2" name="phone2" oninput="updateSignature()" /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" oninput="updateSignature()" /><br /><br />
+      <label for="companyName ">Company Name:</label><br />
+      <input type="text" id="companyName" name="companyName " value="New Business | Quack Recruitment & Training Limited part of Quack Group" oninput="updateSignature()" /><br /><br />
+      <label for="website">Website:</label><br />
+      <input type="text" id="website" name="website" value="https://quackrecruitmentandtraining.co.uk/" oninput="updateSignature()" /><br /><br />
+      <button type="reset" class="copy-button" style="background-color: darkred">clear</button>
+    </form>
+
+    <h2>Signature Preview</h2>
+    <p>Just select everything inside the preview window and copy it into your outlook signature:</p>
+    <button class="copy-button" onclick="copyPreview()">Copy Signature</button>
+
+    <div class="preview" id="signaturePreview"></div>
+    <!-- <h3>Raw HTML</h3>
+    <button class="copy-button" onclick="copyToClipboard()">Copy HTML</button> -->
+  </body>
+</html>
